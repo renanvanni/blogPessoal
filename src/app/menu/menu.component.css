@@ -5,3 +5,11 @@
 a{
     cursor: pointer;
 }
+
+#bg{
+    background-color: black;
+}
+
+.fa-sign-out:hover{
+    color: red;
+}

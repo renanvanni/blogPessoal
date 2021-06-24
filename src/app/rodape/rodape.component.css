@@ -26,3 +26,11 @@ ul.social-network li{
 .fa-linkedin-square:hover{
     color: #0072b1;
 }
+
+.fa-github-square:hover{
+    color: black;
+}
+
+#bg{
+    background-color: black;
+}
