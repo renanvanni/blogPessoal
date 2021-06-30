@@ -1,3 +1,7 @@
+.fa-angle-double-left:hover{
+    color: red;
+}
+
 .bs:focus{
     box-shadow: 0 0 1em white;
     border-style: none;
