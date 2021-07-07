@@ -29,6 +29,8 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
 
+    window.scroll(0, 0)
+
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
@@ -56,8 +58,8 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  findByIdUser(){
-    this.auth.getByIdUser(this.idUser).subscribe((resp: User)=>{
+  findByIdUser() {
+    this.auth.getByIdUser(this.idUser).subscribe((resp: User) => {
       this.user = resp
     })
   }
