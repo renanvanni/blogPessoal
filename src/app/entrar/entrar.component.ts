@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./entrar.component.css']
 })
 export class EntrarComponent implements OnInit {
-  
+
   userLogin: UserLogin = new UserLogin();
 
   constructor(
@@ -19,11 +19,12 @@ export class EntrarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
+    this.verSenha()
   }
 
-  entrar(){
-    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
+  entrar() {
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
 
       environment.token = this.userLogin.token
@@ -37,9 +38,23 @@ export class EntrarComponent implements OnInit {
       console.log(environment.id)
 
       this.router.navigate(['/inicio'])
-    }, erro =>{
-      if(erro.status == 500){
+    }, erro => {
+      if (erro.status == 500) {
         alert('Usuário ou senha estão incorretos!')
+      }
+    })
+  }
+
+  verSenha() {
+    let btn = document.querySelector('.fa-eye')
+
+    btn?.addEventListener('click', () => {
+      let inputSenha = document.querySelector('#senha')
+
+      if (inputSenha?.getAttribute('type') == 'password') {
+        inputSenha?.setAttribute('type', 'text')
+      } else {
+        inputSenha?.setAttribute('type', 'password')
       }
     })
   }

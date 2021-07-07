@@ -16,3 +16,18 @@
     border-color: black;
     box-shadow: 0 0 1em black;
 }
+
+.olho{
+    position: absolute;
+    top: 55px;
+    right: 13px;
+    cursor: pointer;
+    color: #241B6B;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
