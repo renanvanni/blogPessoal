@@ -1,0 +1,10 @@
+.caixa{
+    border-radius: 10px;
+    border-color: black;
+    box-shadow: 0 0 1em black;
+}
+
+.bs:focus{
+    box-shadow: 0.4em 0.4em 1em black;
+    border-style: none;
+}
