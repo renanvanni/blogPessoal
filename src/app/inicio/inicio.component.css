@@ -2,3 +2,47 @@
     box-shadow: 0 0 1em white;
     border-style: none;
 }
+
+.sombra:focus{
+    box-shadow: 0 0 1em black;
+    border-style: none;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 2px solid black;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: black;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 350px;
+    background: #27213300;
+    border-radius: 10px;
+}
+
+i{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    color: black;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}

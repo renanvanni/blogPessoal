@@ -57,8 +57,12 @@
             
             <div class="row d-flex justify-content-center mt-5 mb-5">
                 <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id='titulo' placeholder="Digite um título de postagem para pesquisar" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+                    <div class="box">
+                        <form name="search">
+                            <input type="text" class="input" name="txt" id='titulo' onmouseout="document.search.txt.value = ''" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+                            <!-- placeholder="Digite um título de postagem para pesquisar" -->
+                        </form>
+                        <i class="fa fa-search" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -101,9 +105,13 @@
 
             <div class="row d-flex justify-content-center mt-5 mb-5">
                 <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id='titulo' placeholder="Digite um tema para pesquisar" [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
-                    </div>
+                    <div class="box">
+                        <form name="search">
+                            <input type="text" class="input" name="txt" id='titulo' onmouseout="document.search.txt.value = ''" [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
+                            <!-- placeholder="Digite um tema para pesquisar" -->
+                        </form>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>                    
                 </div>
             </div>
             <!-- Cards de Postagens por tema -->
