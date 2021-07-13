@@ -55,7 +55,7 @@
     <div class="tab-content mt-5" id="myTabContent">
         <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
             
-            <div class="row d-flex justify-content-center mt-5 mb-5">
+            <div *ngIf='listaPostagens.length != 0' class="row d-flex justify-content-center mt-5 mb-5">
                 <div class="col-md-4">
                     <div class="box">
                         <form name="search">
